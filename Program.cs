@@ -39,6 +39,7 @@ namespace AdventOfCode2022
 
             NoSpaceLeftOnDevice spacey = new();
             spacey.FindDirectoriesUnderSize(100000);
+            spacey.FindSmallestDirectoryToDelete(70000000, 30000000);
 
         }
 

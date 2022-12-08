@@ -46,6 +46,27 @@ namespace AdventOfCode2022
             }
         }
 
+        public void FindSmallestDirectoryToDelete(int filesystemSize, int requiredSpace)
+        {
+            int usedSpace = folderSizes["/"];
+            int unusedSpace = filesystemSize - usedSpace;
+
+            int spacetoFree = requiredSpace - unusedSpace;
+
+            int minValidFolderSize = int.MaxValue;
+            string dirToDelete = "";
+            foreach(var a in folderSizes)
+            { 
+                if(a.Value > spacetoFree && a.Value < minValidFolderSize && !a.Key.Equals("/"))
+                {
+                    minValidFolderSize = Math.Min(a.Value, minValidFolderSize);
+                    dirToDelete = a.Key;
+                }
+            }
+
+            System.Console.WriteLine("size of the directory to delete is: {0}", folderSizes[dirToDelete]);
+        }
+
         public void FindDirectoriesUnderSize(int size)
         {
             
