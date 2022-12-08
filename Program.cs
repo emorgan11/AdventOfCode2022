@@ -37,6 +37,9 @@ namespace AdventOfCode2022
             tuna.FindMarker(4); //packet marker
             tuna.FindMarker(14); //message marker
 
+            NoSpaceLeftOnDevice spacey = new();
+            spacey.FindDirectoriesUnderSize(100000);
+
         }
 
     }
