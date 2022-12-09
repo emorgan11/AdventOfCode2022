@@ -41,6 +41,9 @@ namespace AdventOfCode2022
             spacey.FindDirectoriesUnderSize(100000);
             spacey.FindSmallestDirectoryToDelete(70000000, 30000000);
 
+            TreetopTreeHouse treety = new();
+
+
         }
 
     }
