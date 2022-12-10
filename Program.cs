@@ -43,6 +43,8 @@ namespace AdventOfCode2022
 
             TreetopTreeHouse treety = new();
 
+            RopeBridge bridgey = new();
+            bridgey.FindPositionsVisited(1);
 
         }
 
